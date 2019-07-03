@@ -5,6 +5,10 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist'
+  },
+  watchOptions: {
+    ignored: /node_modules/
   },
   module: {
     rules: [
