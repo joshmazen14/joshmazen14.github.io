@@ -1,6 +1,12 @@
 import React from 'preact';
 
+import App from './app';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'shards-ui/dist/css/shards.min.css';
+import './styles.css';
+
 React.render(
-  <section>I don't trust like that</section>,
+  <App />,
   document.getElementById('root'),
 );
