@@ -1,18 +1,30 @@
 import React from 'preact';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { StaticRouter as Router, Route } from 'react-router-dom';
+import ReactDOMServer from 'react-dom/server';
 import Home from './home';
 import Navbar from './navbar';
+import About from './about';
 
-const App = (props) => (
-  <Router>
+import Html from './html';
+
+const routes = (
+  <div>
     <Navbar/>
     <div class="site">
-      <Switch>
-        <Route exact path='/' component={Home} />
-      </Switch>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/about' component={About} />
     </div>
-  </Router>
-);
+  </div>
+)
 
+const App = (locals) =>
+  ReactDOMServer.renderToString(
+      <Html>
+    <Router location={locals.path} context={{}}>
+        {routes}
+    </Router>
+      </Html>
+  )
+;
 
 export default App;

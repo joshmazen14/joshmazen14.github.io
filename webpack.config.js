@@ -1,14 +1,22 @@
 const path = require('path');
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+const { JSDOM } = require('jsdom');
+
+const dom = new JSDOM()
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist'
+    libraryTarget: 'umd',
   },
   watchOptions: {
     ignored: /node_modules/
+  },
+  devServer: {
+    inline: false
   },
   module: {
     rules: [
@@ -36,5 +44,16 @@ module.exports = {
       'react': 'preact-compat',
       'react-dom': 'preact-compat',
     }
-  }
+  },
+  plugins: [
+    new StaticSiteGeneratorPlugin({
+      crawl: true,
+      globals: {
+        window: dom.window,
+        document: dom.window.document,
+        navigator: dom.window.navigator
+      }
+    }),
+    new LiveReloadPlugin(),
+  ],
 }
