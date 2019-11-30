@@ -4,7 +4,7 @@ const Html = props => (
   <html>
     <head>
       <title>Josh Mazen</title>
-      <link rel="icon" href="./favicon.ico" />
+      <link rel="icon" href="/dist/favicon.ico" />
     </head>
     { process.env.NODE_ENV !== 'production' && (
       <script src="http://localhost:35729/livereload.js"></script>
