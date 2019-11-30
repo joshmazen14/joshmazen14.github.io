@@ -19,11 +19,11 @@ const routes = (
 
 const App = (locals) =>
   ReactDOMServer.renderToString(
-      <Html>
-    <Router location={locals.path} context={{}}>
+    <Html>
+      <Router location={locals.path} context={{}}>
         {routes}
-    </Router>
-      </Html>
+      </Router>
+    </Html>
   )
 ;
 

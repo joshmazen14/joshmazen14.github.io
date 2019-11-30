@@ -1,9 +1,9 @@
 import React from 'preact';
 
-import { Container } from 'shards-react';
-
 const Home = (props) => (
-  <div>I don't trust like that</div>
+  <section>
+    Welcome to my dumb website. This is supposed to be professional but hey what are you gonna do?
+  </section>
 )
 
 export default Home;

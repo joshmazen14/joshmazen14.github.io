@@ -3,7 +3,7 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const { JSDOM } = require('jsdom');
 
-const dom = new JSDOM()
+const dom = new JSDOM();
 
 module.exports = {
   entry: './index.js',
@@ -16,8 +16,10 @@ module.exports = {
     ignored: /node_modules/
   },
   devServer: {
-    inline: false
+    inline: false,
+    hot: true,
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
