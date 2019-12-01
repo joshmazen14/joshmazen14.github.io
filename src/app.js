@@ -4,6 +4,8 @@ import ReactDOMServer from 'react-dom/server';
 import Home from './home';
 import Navbar from './navbar';
 import About from './about';
+import Resume from './resume';
+import Laughs from './laughs';
 
 import Html from './html';
 
@@ -13,6 +15,8 @@ const routes = (
     <div class="site">
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
+      <Route exact path='/resume' component={Resume} />
+      <Route exact path='/laughs' component={Laughs} />
     </div>
   </div>
 )

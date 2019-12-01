@@ -1,4 +1,3 @@
-const path = require('path');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const { JSDOM } = require('jsdom');

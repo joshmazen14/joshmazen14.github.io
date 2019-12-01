@@ -19,6 +19,12 @@ const SiteNavbar = (props) => (
       <NavLink href='/about'>
         About
       </NavLink>
+      <NavLink href='/resume'>
+        Resume
+      </NavLink>
+      <NavLink href='/laughs'>
+        Laughs
+      </NavLink>
     </Nav>
     <Nav navbar>
       <NavItem>

@@ -5,3 +5,7 @@
 .main-nav {
   flex-direction: row;
 }
+
+.nav-link {
+  margin-right: 0.85rem;
+}

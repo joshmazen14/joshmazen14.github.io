@@ -1,6 +1,6 @@
 import React from 'preact';
 
-const About = (props) => (
+const About = () => (
   <div>I don't trust like that</div>
 )
 
