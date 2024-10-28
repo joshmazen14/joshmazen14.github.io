@@ -15,7 +15,7 @@ my dad asked. "Sure," I said, having had really nothing to do. I didn't care for
 
 <br><br>
 <center>
-  <img src="/assets/gif/mccown.png" alt="Josh McCown spinning on the air"/>
+  <img src="/assets/gif/mccown.gif" alt="Josh McCown spinning on the air"/>
   <div>This guy would end up being the Jets 2nd best QB since I started watching football</div>
 </center>
 <br><br>
